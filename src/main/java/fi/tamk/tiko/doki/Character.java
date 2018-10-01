@@ -28,6 +28,8 @@ public abstract class Character {
 
     public abstract void fight(Character other);
 
+    public abstract void drink(AlcoholicDrink alcoholicDrink);
+
     public int getHealthPoints() {
         return healthPoints;
     }
