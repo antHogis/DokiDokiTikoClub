@@ -1,16 +1,50 @@
 package fi.tamk.tiko.doki;
 
-public interface Character {
+public abstract class Character {
 
-    void talkWith(Character other);
+    private int healthPoints;
 
-    void fight(Character other);
+    private float alcoholTolerance;
 
-    int getHealthPoints();
+    private float intoxicationLevel;
 
-    float getAlcoholTolerance();
+    public Character() {
+        this.healthPoints = 1;
+        this.alcoholTolerance = 0;
+        this.intoxicationLevel = 0;
+    }
 
-    float getIntoxicationLevel();
+    public Character(int healthPoints, float alcoholTolerance, float intoxicationLevel) {
+        this.healthPoints = healthPoints;
+        this.alcoholTolerance = alcoholTolerance;
+        this.intoxicationLevel = intoxicationLevel;
+    }
 
+    public abstract void talkWith(Character other);
 
+    public abstract void fight(Character other);
+
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
+    }
+
+    public float getAlcoholTolerance() {
+        return alcoholTolerance;
+    }
+
+    public void setAlcoholTolerance(float alcoholTolerance) {
+        this.alcoholTolerance = alcoholTolerance;
+    }
+
+    public float getIntoxicationLevel() {
+        return intoxicationLevel;
+    }
+
+    public void setIntoxicationLevel(float intoxicationLevel) {
+        this.intoxicationLevel = intoxicationLevel;
+    }
 }
