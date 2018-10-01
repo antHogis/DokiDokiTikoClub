@@ -2,15 +2,15 @@ package fi.tamk.tiko.doki;
 
 public abstract class Character {
 
-    private String name;
+    protected String name;
 
-    private int healthPoints;
+    protected int healthPoints;
 
-    private int experiencePoints;
+    protected int experiencePoints;
 
-    private float alcoholTolerance;
+    protected float alcoholTolerance;
 
-    private float intoxicationLevel;
+    protected float intoxicationLevel;
 
     public Character(String name) {
         this.healthPoints = 1;
