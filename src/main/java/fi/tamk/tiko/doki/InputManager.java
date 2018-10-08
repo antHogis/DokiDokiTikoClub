@@ -33,4 +33,24 @@ public class InputManager {
         return input;
     }
 
+    public int getIntInput(IntInputValidator inputValidator) {
+        int returnValue = 0;
+        boolean validInput = false;
+
+        do {
+            System.out.println(this.message);
+            String input = scanner.nextLine();
+            try {
+                returnValue = Integer.parseInt(input);
+                if (inputValidator.validInput(returnValue)) {
+                    validInput = true;
+                }
+            } catch (NumberFormatException e) {
+
+            }
+        } while (!validInput);
+
+        return returnValue;
+    }
+
 }
