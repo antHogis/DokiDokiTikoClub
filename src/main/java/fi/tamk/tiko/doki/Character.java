@@ -1,6 +1,6 @@
 package fi.tamk.tiko.doki;
 
-public abstract class Character {
+public class Character {
 
     protected String name;
 
@@ -11,6 +11,10 @@ public abstract class Character {
     protected float alcoholTolerance;
 
     protected float intoxicationLevel;
+
+    public Character() {
+
+    }
 
     public Character(String name) {
         this.healthPoints = 1;
