@@ -12,6 +12,16 @@ public class Character {
 
     protected float intoxicationLevel;
 
+    public Event getCurrentEvent() {
+        return currentEvent;
+    }
+
+    public void setCurrentEvent(Event currentEvent) {
+        this.currentEvent = currentEvent;
+    }
+
+    Event currentEvent;
+
     public Character() {
 
     }

@@ -1,4 +1,5 @@
 package fi.tamk.tiko.doki;
+import fi.tamk.tiko.doki.events.*;
 
 public class TextGame extends Game {
 
@@ -9,6 +10,6 @@ public class TextGame extends Game {
     }
 
     public void start() {
-        renderer.renderMainMenu();
+        pc.setCurrentEvent(new MainMenuEvent(pc));
     }
 }
