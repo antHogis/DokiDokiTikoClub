@@ -21,4 +21,16 @@ public class InputManager {
         return input;
     }
 
+    public String getStringInput(StringInputValidator inputValidator, String message) {
+        String input;
+        this.message = message;
+
+        do {
+            System.out.println(this.message);
+            input = scanner.nextLine();
+        } while (!inputValidator.validInput(input));
+
+        return input;
+    }
+
 }
