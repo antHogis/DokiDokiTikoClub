@@ -18,6 +18,7 @@ public class Character {
 
     public void setCurrentEvent(Event currentEvent) {
         this.currentEvent = currentEvent;
+        currentEvent.render();
     }
 
     Event currentEvent;
