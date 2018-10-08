@@ -10,6 +10,7 @@ public class MainMenuEvent extends Event {
         super(g, c);
         this.setEventText("WELCOME TO VIDEO GAME.");
         addChoice(new NewGameChoice());
+        addChoice(new ExitGameChoice());
     }
 
     public static class NewGameChoice extends Choice {
@@ -17,7 +18,14 @@ public class MainMenuEvent extends Event {
             this.setChoiceText("NEW GAME");
         }
         public void choose() {
+            getCharacter().setCurrentEvent(new NameInputEvent(g, c));
+        }
+    }
 
+    public static class ExitGameChoice extends Choice {
+        public ExitGameChoice() { this.setChoiceText("EXIT GAME"); }
+        public void choose() {
+            System.exit(0);
         }
     }
 }
