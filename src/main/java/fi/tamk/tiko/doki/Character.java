@@ -24,12 +24,6 @@ public abstract class Character {
         this.intoxicationLevel = intoxicationLevel;
     }
 
-    public abstract void talkWith(Character other);
-
-    public abstract void fight(Character other);
-
-    public abstract void drink(AlcoholicDrink alcoholicDrink);
-
     public int getHealthPoints() {
         return healthPoints;
     }
