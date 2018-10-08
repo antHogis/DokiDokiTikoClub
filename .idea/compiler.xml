@@ -9,5 +9,8 @@
         <module name="DokiDokiTikoClub" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DokiDokiTikoClub" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
