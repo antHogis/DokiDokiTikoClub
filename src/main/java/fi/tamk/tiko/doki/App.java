@@ -5,8 +5,9 @@ package fi.tamk.tiko.doki;
  *
  */
 public class App {
-    InputManager inputManager;
-    public static void main( String[] args ) {
 
+    public static void main( String[] args ) {
+        TextGame game = new TextGame();
+        game.start();
     }
 }

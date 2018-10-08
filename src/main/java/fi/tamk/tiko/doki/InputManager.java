@@ -14,7 +14,7 @@ public class InputManager {
     public String getStringInput(StringInputValidator inputValidator) {
         String input;
         do {
-            System.out.println(this.message);
+            //System.out.println(this.message);
             input = scanner.nextLine();
         } while (!inputValidator.validInput(input));
 
@@ -26,7 +26,7 @@ public class InputManager {
         this.message = message;
 
         do {
-            System.out.println(this.message);
+            //System.out.println(this.message);
             input = scanner.nextLine();
         } while (!inputValidator.validInput(input));
 
@@ -38,7 +38,7 @@ public class InputManager {
         boolean validInput = false;
 
         do {
-            System.out.println(this.message);
+            //System.out.println(this.message);
             String input = scanner.nextLine();
             try {
                 returnValue = Integer.parseInt(input);

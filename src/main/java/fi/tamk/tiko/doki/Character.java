@@ -1,6 +1,6 @@
 package fi.tamk.tiko.doki;
 
-public abstract class Character {
+public class Character {
 
     protected String name;
 
@@ -11,6 +11,26 @@ public abstract class Character {
     protected float alcoholTolerance;
 
     protected float intoxicationLevel;
+
+    public Event getCurrentEvent() {
+        return currentEvent;
+    }
+
+    public void promptChoice() {
+        int choiceNum = currentEvent.getGame().getInputManager().getIntInput(input -> ((input >= 1) && (input <= currentEvent.getChoices().size())));
+        currentEvent.getChoices().get(choiceNum - 1).choose();
+    }
+
+    public void setCurrentEvent(Event currentEvent) {
+        this.currentEvent = currentEvent;
+        currentEvent.render();
+    }
+
+    Event currentEvent;
+
+    public Character() {
+
+    }
 
     public Character(String name) {
         this.healthPoints = 1;
@@ -23,12 +43,6 @@ public abstract class Character {
         this.alcoholTolerance = alcoholTolerance;
         this.intoxicationLevel = intoxicationLevel;
     }
-
-    public abstract void talkWith(Character other);
-
-    public abstract void fight(Character other);
-
-    public abstract void drink(AlcoholicDrink alcoholicDrink);
 
     public int getHealthPoints() {
         return healthPoints;
