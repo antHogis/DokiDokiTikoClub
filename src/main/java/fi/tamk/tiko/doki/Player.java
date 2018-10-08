@@ -7,18 +7,4 @@ public class Player extends Character{
         super(name);
     }
 
-    @Override
-    public void talkWith(Character other) {
-
-    }
-
-    @Override
-    public void fight(Character other) {
-
-    }
-
-    @Override
-    public void drink(AlcoholicDrink alcoholicDrink) {
-
-    }
 }
