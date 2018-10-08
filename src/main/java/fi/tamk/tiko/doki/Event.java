@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Event {
-    Character c;
-    Game g;
+    public static Game g;
+    public static Character c;
     List<Choice> choices;
     String eventText;
 
@@ -13,6 +13,14 @@ public class Event {
         this.c = c;
         this.g = g;
         this.choices = new ArrayList<>();
+    }
+
+    public static Game getGame() {
+        return g;
+    }
+
+    public static Character getCharacter() {
+        return c;
     }
 
     public void addChoice(Choice c) {

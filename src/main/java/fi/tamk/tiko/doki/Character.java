@@ -16,6 +16,11 @@ public class Character {
         return currentEvent;
     }
 
+    public void promptChoice() {
+        int choiceNum = currentEvent.getGame().getInputManager().getIntInput(input -> ((input >= 1) && (input <= currentEvent.getChoices().size())));
+        currentEvent.getChoices().get(choiceNum - 1).choose();
+    }
+
     public void setCurrentEvent(Event currentEvent) {
         this.currentEvent = currentEvent;
         currentEvent.render();
