@@ -1,5 +1,6 @@
 package fi.tamk.tiko.doki.events;
 
+import fi.tamk.tiko.doki.events.angrygorbatimeline.*;
 import fi.tamk.tiko.doki.Character;
 import fi.tamk.tiko.doki.Choice;
 import fi.tamk.tiko.doki.Event;
@@ -24,7 +25,7 @@ public class AngryGorbaEvent extends Event {
 
         @Override
         public void choose() {
-            
+            c.setCurrentEvent(new GorbaApology(g, c));
         }
     }
 
