@@ -3,7 +3,7 @@ package fi.tamk.tiko.doki;
 public class Game {
     InputManager inputManager;
     Renderer renderer;
-    Character pc;
+    Character player;
 
     public Renderer getRenderer() {
         return renderer;
@@ -13,8 +13,8 @@ public class Game {
         return inputManager;
     }
 
-    public Character getPc() {
-        return pc;
+    public Character getPlayer() {
+        return player;
     }
 
 }
