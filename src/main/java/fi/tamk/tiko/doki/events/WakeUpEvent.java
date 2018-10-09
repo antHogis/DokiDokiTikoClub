@@ -16,6 +16,7 @@ public class WakeUpEvent extends Event {
                 " who is sitting at his computer typing something.");
         this.addChoice(new AskGorbaChoice());
         this.addChoice(new FuckYouGorbaChoice());
+        this.addChoice(new CommandGorbaChoice());
     }
 
     static class AskGorbaChoice extends Choice {
@@ -27,6 +28,12 @@ public class WakeUpEvent extends Event {
     static class FuckYouGorbaChoice extends Choice {
         FuckYouGorbaChoice() {
             setChoiceText("\"Were you watching me sleep, you creepy motherfucker??\"");
+        }
+    }
+
+    static class CommandGorbaChoice extends Choice {
+        CommandGorbaChoice() {
+            setChoiceText("\"Gorba, bring me some coffee!\"");
         }
     }
 }
