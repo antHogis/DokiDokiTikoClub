@@ -19,17 +19,32 @@ public class AngryGorbaEvent extends Event {
         SorryChoice() {
             setChoiceText("\"Oh, I'm sorry.\"");
         }
+
+        @Override
+        public void choose() {
+            
+        }
     }
 
     static class AreYouWannaDieChoice extends Choice {
         AreYouWannaDieChoice() {
             setChoiceText("\"Fight me!\"");
         }
+
+        @Override
+        public void choose() {
+            
+        }
     }
 
     static class NaniChoice extends Choice {
         NaniChoice() {
             setChoiceText("\"What!?\"");
+        }
+
+        @Override
+        public void choose() {
+            
         }
     }
 }

@@ -23,17 +23,32 @@ public class WakeUpEvent extends Event {
         AskGorbaChoice() {
             setChoiceText("\"What are you still doing here, Gorba?\"");
         }
+
+        @Override
+        public void choose() {
+            
+        }
     }
 
     static class FuckYouGorbaChoice extends Choice {
         FuckYouGorbaChoice() {
             setChoiceText("\"Were you watching me sleep, you creepy motherfucker??\"");
+            
+        }
+
+        public void choose() {
+            c.setCurrentEvent(new AngryGorbaEvent(g, c));
         }
     }
 
     static class CommandGorbaChoice extends Choice {
         CommandGorbaChoice() {
             setChoiceText("\"Gorba, bring me some coffee!\"");
+        }
+        
+        @Override
+        public void choose() {
+            
         }
     }
 }

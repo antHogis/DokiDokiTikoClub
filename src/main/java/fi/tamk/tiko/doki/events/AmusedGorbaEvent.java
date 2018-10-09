@@ -19,17 +19,32 @@ public class AmusedGorbaEvent extends Event {
         WhyIsthatSoFunnyChoice() {
             setChoiceText("\"Why are you laughing?\"");
         }
+
+        @Override
+        public void choose() {
+            
+        }
     }
 
     static class SayNothingChoice extends Choice {
         SayNothingChoice() {
             setChoiceText("\"...\"");
         }
+        
+        @Override
+        public void choose() {
+            
+        }
     }
 
     static class GTFOChoice extends Choice {
         GTFOChoice() {
             setChoiceText("\"Fuck this shit, I'm out. Later, asshole. *Walk out of the classroom*\"");
+        }
+
+        @Override
+        public void choose() {
+            
         }
     }
 }

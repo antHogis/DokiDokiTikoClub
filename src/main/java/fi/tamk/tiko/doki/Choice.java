@@ -1,18 +1,9 @@
 package fi.tamk.tiko.doki;
 
-public class Choice {
+public abstract class Choice {
     String choiceText;
     Event hostEvent;
     Event nextEvent;
-
-    public Choice() {
-
-    }
-
-    public Choice(Event hostEvent, Event nextEvent) {
-        this.hostEvent = hostEvent;
-        this.nextEvent = nextEvent;
-    }
 
     public String getChoiceText() {
         return choiceText;
@@ -22,7 +13,5 @@ public class Choice {
         this.choiceText = choiceText;
     }
 
-    public void choose() {
-
-    }
+    public abstract void choose();
 }
