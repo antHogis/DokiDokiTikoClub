@@ -33,7 +33,6 @@ public class WakeUpEvent extends Event {
     static class FuckYouGorbaChoice extends Choice {
         FuckYouGorbaChoice() {
             setChoiceText("\"Were you watching me sleep, you creepy motherfucker??\"");
-            
         }
 
         public void choose() {
