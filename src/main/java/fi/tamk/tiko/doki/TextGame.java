@@ -5,10 +5,10 @@ public class TextGame extends Game {
     public TextGame() {
         this.inputManager = new InputManager();
         this.renderer = new TextRenderer();
-        this.pc = new Character();
+        this.player = new Character();
     }
 
     public void start() {
-        pc.setCurrentEvent(new MainMenuEvent(this, pc));
+        player.setCurrentEvent(new MainMenuEvent(this, player));
     }
 }

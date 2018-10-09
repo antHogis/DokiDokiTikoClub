@@ -10,8 +10,8 @@ public class NameInputEvent extends Event {
         String charName;
         g.getRenderer().renderText("Input character name: ");
         charName = g.getInputManager().getStringInput(input -> ((input.length() > 0) && (input.length() < 20)));
-        g.getPc().setName(charName);
-        g.getPc().setCurrentEvent(new WakeUpEvent(g, c));
+        g.getPlayer().setName(charName);
+        g.getPlayer().setCurrentEvent(new WakeUpEvent(g, c));
     }
     public void choose() {}
 }
